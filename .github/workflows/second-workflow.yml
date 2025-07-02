@@ -1,0 +1,11 @@
+name: Ouput events details on "issues"
+
+on: "issues"
+
+jobs:
+  listen-new-issues-created:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Print the issue details
+        run: echo "${{fromJson(github)}}"
+
